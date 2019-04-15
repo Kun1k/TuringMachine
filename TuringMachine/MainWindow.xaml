@@ -1,0 +1,34 @@
+﻿<Window x:Class="TuringSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Turing Simulator © 2019 By Nikolay Kunev" Height="607" Width="650" Background="White" Icon="Images/icon.png">
+    <Canvas HorizontalAlignment="Left" Height="567" Margin="9,9,0,0" VerticalAlignment="Top" Width="621">
+        <GroupBox Header="Tape 2" Height="54" Width="480" Canvas.Top="59"/>
+        <GroupBox Header="Tape 1" Height="54" Width="480"/>
+        <GroupBox Header="Tape 3" Height="54" Width="480" Canvas.Top="118"/>
+        <TextBox x:Name="tbNr1" Height="36" TextWrapping="WrapWithOverflow" Canvas.Top="190" Width="72" Canvas.Left="10" FontSize="24" TabIndex="1"/>
+        <Button x:Name="btnStart" Content="Rechnen" Canvas.Top="190" Width="99" Click="btnStart_Click" Canvas.Left="277" FontSize="24" TabIndex="3"/>
+        <TextBox x:Name="tape1" Height="31" Text="_______________0_______________" Canvas.Top="17" Width="456" MaxLines="1" TextWrapping="WrapWithOverflow" FontFamily="Courier New" FontSize="24" Canvas.Left="10" IsReadOnly="True"/>
+        <Border BorderBrush="Black" BorderThickness="1" Height="28" Canvas.Left="228" Canvas.Top="17" Width="17" Background="#FF09D34E" OpacityMask="Black" Opacity="0.5"/>
+        <TextBox x:Name="tape2" Height="31" Text="_______________0_______________" Canvas.Top="74" Width="456" MaxLines="1" FontFamily="Courier New" FontSize="24" Canvas.Left="10" IsReadOnly="True" />
+        <TextBox x:Name="tape3" Height="31" Text="_______________0_______________" Canvas.Top="133" Width="456" MaxLines="1" TextWrapping="WrapWithOverflow" FontFamily="Courier New" FontSize="24" Canvas.Left="10" IsReadOnly="True"/>
+        <Border BorderBrush="Black" BorderThickness="1" Height="28" Canvas.Left="228" Canvas.Top="74" Width="17" Background="#FF09D34E" OpacityMask="Black" Opacity="0.5"/>
+        <Border BorderBrush="Black" BorderThickness="1" Height="28" Canvas.Left="228" Canvas.Top="133" Width="17" Background="#FF09D34E" OpacityMask="Black" Opacity="0.5"/>
+        <Button x:Name="btnReset" Content="Reset" Canvas.Top="190" Width="75" Click="btnReset_Click" Canvas.Left="405" FontSize="24" TabIndex="4"/>
+        <TextBox x:Name="tbSteps" Height="38" Canvas.Left="100" TextWrapping="Wrap" Canvas.Top="289" Width="125" Background="#FF71FF63" FontSize="24" BorderThickness="3" Text="0" IsReadOnly="True" />
+        <TextBlock Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="289" Height="29" FontSize="24"><Run Text="Schritte"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="tbState" Height="42" Canvas.Left="100" TextWrapping="Wrap" Canvas.Top="332" Width="42" Background="#FF71FF63" FontSize="24" BorderThickness="3" IsReadOnly="True"/>
+        <TextBlock Canvas.Left="9" TextWrapping="Wrap" Canvas.Top="332" Height="32" Text="State" FontSize="24"/>
+        <TextBox x:Name="tbNr2" Height="37" TextWrapping="WrapWithOverflow" Canvas.Top="190" Width="72" Canvas.Left="112" FontSize="24" TabIndex="2"/>
+        <TextBox x:Name="tbStepOutput" Height="260" Canvas.Left="277" TextWrapping="Wrap" Canvas.Top="289" Width="334" FontSize="14" BorderThickness="3" Background="#FF71FF63" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+        <TextBlock Canvas.Left="278" TextWrapping="Wrap" Canvas.Top="255" Height="32" FontSize="24" Width="334" Text="Details"/>
+        <TextBox x:Name="tbResult" Height="42" Canvas.Left="100" TextWrapping="Wrap" Canvas.Top="382" Width="125" Background="#FF71FF63" FontSize="24" BorderThickness="3" IsReadOnly="True"/>
+        <TextBlock Canvas.Left="9" TextWrapping="Wrap" Canvas.Top="382" Height="32" Text="Resultat" FontSize="24"/>
+    </Canvas>
+
+
+</Window>
